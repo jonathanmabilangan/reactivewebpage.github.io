@@ -1,0 +1,104 @@
+@import '_variables'
+
+@function color($color-name) 
+    @return map-get($colors, $color-name)
+   
+@mixin mobile 
+    @media (max-width: #{$mobile})
+        @content
+
+body
+
+    .nav
+        padding-top: 10px
+        @include mobile
+            text-align: left
+            width: 100%
+
+    .nav>li
+        @include mobile
+            color: color(navcolor)
+            opacity: 2
+            display: list-item  
+            float: none   
+
+    .navbar
+        opacity: 0.9
+        padding-bottom: 15px
+        .li
+            opacity: 1
+    
+    .dropdown-menu>li
+        @include mobile
+            display: list-item
+            text-align: center
+
+    .imgsize
+        filter: brightness(70%)
+        height: 258px
+        width: 100%
+
+    .icon-bar
+        margin-top: 5px
+
+    .h1custom
+        color: color(headercolor)
+        padding-left: 10%
+        position: absolute
+        top: 140px
+        width: 100%
+
+    .h3custom
+        color: color(hthreecolor)
+        padding-left: 15px
+
+    .contentmargin
+        margin-top: 100px
+
+        @include mobile
+            margin-top: 0
+
+    .col-md-4
+        @include mobile
+            text-align: center
+            padding-right: 10px
+
+    .secondparagraph
+        font-size: 28px
+
+    .contentimage
+        padding-left: 100px
+
+        @include mobile
+            padding-left: 0
+
+    .container
+        margin-top: 100px
+
+        @include mobile
+            margin-top: 0
+
+    .linkformat
+        text-decoration: none
+
+    .footermargin  
+        @include mobile
+            margin-top: 30px
+            margin-bottom: 10px
+
+    .pagefooter
+        @include mobile
+            text-align: center
+
+    .pagefooterfont
+        font-weight: bold
+        text-transform: uppercase
+
+
+
+
+
+
+    
+
+        
